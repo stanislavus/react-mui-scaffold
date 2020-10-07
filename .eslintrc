@@ -1,6 +1,5 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
@@ -10,13 +9,15 @@
     }
   },
   "extends": [
-    "airbnb-typescript"
+    "airbnb-typescript",
+    "plugin:eslint-comments/recommended",
+    "plugin:node/recommended",
+    "plugin:jest/recommended"
   ],
   "plugins": [
-    "@typescript-eslint",
-    "react",
-    "jsx-a11y",
-    "import"
+    "eslint-comments",
+    "node",
+    "jest"
   ],
   "env": {
     "browser": true
@@ -33,12 +34,10 @@
       }
     ],
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "no-unused-vars": "off",
-    "no-use-before-define": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "@typescript-eslint/no-unused-vars": ["error"],
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/explicit-module-boundary-types": "off"
+    "node/no-missing-import": "off",
+    "node/no-unpublished-import": "off",
+    "node/no-unpublished-require": "off",
+    "node/no-unsupported-features/es-syntax": "off"
   },
   "settings": {
     "import/resolver": {
