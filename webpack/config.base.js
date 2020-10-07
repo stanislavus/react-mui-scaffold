@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, '../src/index.jsx'),
@@ -13,6 +14,14 @@ module.exports = {
   plugins: [
     // Inject html
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../public/index.html') }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+      },
+    }),
   ],
   module: {
     rules: [
@@ -22,10 +31,10 @@ module.exports = {
         exclude: /node_modules|dist/,
         loader: 'eslint-loader',
         options: {
-          emitError: true,
-          emitWarning: true,
+          emitError: false,
+          emitWarning: false,
           failOnError: true,
-          failOnWaring: true,
+          failOnWaring: false,
         },
       },
       {

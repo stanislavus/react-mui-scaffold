@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 
 interface Props {
-    a: number,
-    b: number,
+  a: number,
+  b: number,
 }
 
 const Test: FunctionComponent<Props> = ({ a, b }: Props) => <div>{a + b}</div>;
