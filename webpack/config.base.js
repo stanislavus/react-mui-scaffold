@@ -8,7 +8,7 @@ module.exports = {
     filename: 'main.bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   plugins: [
     // Inject html
@@ -18,7 +18,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.jsx?$/,
+        test: /\.[tj]sx?$/,
         exclude: /node_modules|dist/,
         loader: 'eslint-loader',
         options: {
@@ -29,7 +29,7 @@ module.exports = {
         },
       },
       {
-        test: /\.jsx?$/,
+        test: /\.[tj]sx?$/,
         exclude: /node_modules|dist/,
         use: {
           loader: 'babel-loader',
