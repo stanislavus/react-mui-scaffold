@@ -1,4 +1,4 @@
-import { hot } from 'react-hot-loader/root'; // eslint-disable-line import/no-extraneous-dependencies
+import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import { AppBar } from '@material-ui/core';
 import SimpleComponent from './SimpleComponent';
