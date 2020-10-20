@@ -1,4 +1,6 @@
 const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
@@ -6,12 +8,27 @@ module.exports = {
   entry: path.resolve(__dirname, '../src/index.jsx'),
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'main.bundle.js',
+    filename: '[name].bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   plugins: [
+    // Clean dist folder
+    new CleanWebpackPlugin(),
+    // Copy assets
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, '../public'),
+          to: 'assets',
+          globOptions: {
+            ignore: ['*.DS_Store'],
+          },
+        },
+      ],
+    }),
     // Inject html
     new HtmlWebpackPlugin({ template: path.resolve(__dirname, '../public/index.html') }),
     new ForkTsCheckerWebpackPlugin({

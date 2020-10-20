@@ -7,7 +7,9 @@ const App = () => (
   <React.StrictMode>
     <div>Hello World!</div>
     <SimpleComponent />
-    <AppBar />
+    <AppBar>
+      123
+    </AppBar>
   </React.StrictMode>
 );
 export default (process.env.NODE_ENV === 'development') ? hot(App) : App;
