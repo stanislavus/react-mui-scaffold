@@ -1,6 +1,6 @@
 {
   "name": "react-mui-scaffold",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "description": "React MUI Scaffold",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "@babel/preset-react": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@babel/runtime": "^7.12.1",
-    "@hot-loader/react-dom": "^17.0.0-rc.2",
+    "@hot-loader/react-dom": "^17.0.0",
     "@storybook/addon-a11y": "^6.0.26",
     "@storybook/addon-actions": "^6.0.26",
     "@storybook/addon-backgrounds": "^6.0.26",
