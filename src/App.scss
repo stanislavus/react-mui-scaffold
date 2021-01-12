@@ -1,0 +1,12 @@
+@mixin button {
+  @apply bg-red-500 text-green-900;
+  margin-top: 50px;
+}
+
+.root {
+  @include button;
+}
+
+.a {
+  color: red;
+}
