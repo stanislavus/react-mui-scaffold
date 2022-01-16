@@ -42,18 +42,18 @@ module.exports = {
   ],
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.[tj]sx?$/,
-        exclude: /node_modules|dist/,
-        loader: 'eslint-loader',
-        options: {
-          emitError: false,
-          emitWarning: false,
-          failOnError: true,
-          failOnWaring: false,
-        },
-      },
+      // {
+      //   enforce: 'pre',
+      //   test: /\.[tj]sx?$/,
+      //   exclude: /node_modules|dist/,
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     emitError: false,
+      //     emitWarning: false,
+      //     failOnError: true,
+      //     failOnWaring: false,
+      //   },
+      // },
       {
         test: /\.[tj]sx?$/,
         exclude: /node_modules|dist/,

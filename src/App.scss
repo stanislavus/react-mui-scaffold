@@ -1,5 +1,14 @@
+:global(html) {
+  --text-color: theme('colors.black');
+}
+
+:global(html.dark) {
+  --text-color: theme('colors.white');
+}
+
 @mixin button {
-  @apply bg-red-500 text-green-900;
+  @apply bg-green-500;
+  color: var(--text-color);
   margin-top: 50px;
 }
 

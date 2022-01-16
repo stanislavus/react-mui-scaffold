@@ -1,4 +1,3 @@
-const path = require('path');
 const webpack = require('webpack');
 const { merge } = require('webpack-merge');
 const baseConfig = require('./config.base.js');
@@ -14,7 +13,7 @@ module.exports = merge(baseConfig, {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, './dist'),
+    // contentBase: path.resolve(__dirname, './dist'),
     open: true,
     compress: true,
     hot: true,

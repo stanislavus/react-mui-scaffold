@@ -1,6 +1,6 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import { AppBar } from '@material-ui/core';
+import AppBar from '@mui/material/AppBar';
 import SimpleComponent from './SimpleComponent';
 
 import styles from './App.scss';
